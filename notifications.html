@@ -1,0 +1,236 @@
+<html><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SocialSphere - Notifications</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f2f5;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      background-color: #4267B2;
+      color: white;
+      padding: 10px 0;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+    h1 {
+      color: #1c1e21;
+      margin-bottom: 20px;
+    }
+    .notification {
+      background-color: white;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      transition: background-color 0.3s;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+    .notification:hover {
+      background-color: #f7f8fa;
+    }
+    .notification-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    .notification-content {
+      flex-grow: 1;
+    }
+    .notification-text {
+      margin-bottom: 5px;
+    }
+    .notification-time {
+      font-size: 12px;
+      color: #65676B;
+    }
+    .notification-action {
+      background-color: #e7f3ff;
+      color: #1877f2;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .notification-action:hover {
+      background-color: #dbe7f2;
+    }
+    .unread {
+      position: relative;
+    }
+    .unread::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      background-color: #1877f2;
+      border-radius: 50%;
+    }
+    .load-more {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #4267B2;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .load-more:hover {
+      background-color: #365899;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">SocialSphere</div>
+        <div class="nav-links">
+          <a href="/home.html"
+          <a href="/profile.html"
+          <a href="/messages.html"
+          <a href="/notifications.html"
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Notifications</h1>
+    <div id="notifications-container">
+      <div class="notification unread">
+        <img src="memes 1.jpg" alt="Jane Doe avatar" class="notification-avatar">
+        <div class="notification-content">
+          <p class="notification-text"><strong>Jane Doe</strong> liked your post.</p>
+          <p class="notification-time">2 minutes ago</p>
+        </div>
+        <button class="notification-action">View</button>
+      </div>
+      <div class="notification unread">
+        <img src="memes 2.webp" alt="John Smith avatar" class="notification-avatar">
+        <div class="notification-content">
+          <p class="notification-text"><strong>John Smith</strong> commented on your photo.</p>
+          <p class="notification-time">15 minutes ago</p>
+        </div>
+        <button class="notification-action">Reply</button>
+      </div>
+      <div class="notification">
+        <img src="memes 3.jpg" alt="Alice Johnson avatar" class="notification-avatar">
+        <div class="notification-content">
+          <p class="notification-text"><strong>Alice Johnson</strong> sent you a friend request.</p>
+          <p class="notification-time">1 hour ago</p>
+        </div>
+        <button class="notification-action">Accept</button>
+      </div>
+      <div class="notification">
+        <img src="memes 5.jpg" alt="Tech Group avatar" class="notification-avatar">
+        <div class="notification-content">
+          <p class="notification-text"><strong>Tech Enthusiasts Group</strong> has a new post.</p>
+          <p class="notification-time">3 hours ago</p>
+        </div>
+        <button class="notification-action">View</button>
+      </div>
+      <div class="notification">
+        <img src="memes 1.jpg" alt="Event avatar" class="notification-avatar">
+        <div class="notification-content">
+          <p class="notification-text">Reminder: <strong>Local Music Festival</strong> is tomorrow.</p>
+          <p class="notification-time">5 hours ago</p>
+        </div>
+        <button class="notification-action">Details</button>
+      </div>
+    </div>
+    <button id="load-more" class="load-more">Load More</button>
+  </div>
+
+  <script>
+    const notificationsContainer = document.getElementById('notifications-container');
+    const loadMoreButton = document.getElementById('load-more');
+    let notificationCount = 5;
+
+    loadMoreButton.addEventListener('click', () => {
+      // Simulating loading more notifications
+      const newNotifications = [
+        {
+          avatar: 'https://via.placeholder.com/50',
+          name: 'Mark Wilson',
+          action: 'tagged you in a post',
+          time: '6 hours ago',
+          buttonText: 'View'
+        },
+        {
+          avatar: 'https://via.placeholder.com/50',
+          name: 'Sarah Lee',
+          action: 'mentioned you in a comment',
+          time: '8 hours ago',
+          buttonText: 'Reply'
+        },
+        {
+          avatar: 'https://via.placeholder.com/50',
+          name: 'Photography Club',
+          action: 'added a new event',
+          time: '10 hours ago',
+          buttonText: 'Interested'
+        }
+      ];
+
+      newNotifications.forEach(notification => {
+        const notificationElement = document.createElement('div');
+        notificationElement.className = 'notification';
+        notificationElement.innerHTML = `
+          <img src="${notification.avatar}" alt="${notification.name} avatar" class="notification-avatar">
+          <div class="notification-content">
+            <p class="notification-text"><strong>${notification.name}</strong> ${notification.action}.</p>
+            <p class="notification-time">${notification.time}</p>
+          </div>
+          <button class="notification-action">${notification.buttonText}</button>
+        `;
+        notificationsContainer.appendChild(notificationElement);
+      });
+
+      notificationCount += newNotifications.length;
+      if (notificationCount > 15) {
+        loadMoreButton.style.display = 'none';
+      }
+    });
+
+    // Add interactivity to notifications
+    notificationsContainer.addEventListener('click', (e) => {
+      if (e.target.classList.contains('notification-action')) {
+        const notification = e.target.closest('.notification');
+        notification.classList.remove('unread');
+        // In a real app, we would handle the specific action here
+        alert('Action performed: ' + e.target.textContent);
+      }
+    });
+  </script>
+</body></html>

@@ -1,0 +1,227 @@
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SocialConnect - Your Digital Community</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  header {
+    background-color: #1877f2;
+    color: white;
+    padding: 10px 0;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  .main-content {
+    display: flex;
+    margin-top: 20px;
+  }
+  .feed {
+    flex: 2;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .sidebar {
+    flex: 1;
+    margin-left: 20px;
+  }
+  .post {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+  }
+  .post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .post-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .post-author {
+    font-weight: bold;
+  }
+  .post-content {
+    margin-bottom: 10px;
+  }
+  .post-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  .action-button {
+    background: none;
+    border: none;
+    color: #65676b;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .trending {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .trending h2 {
+    margin-top: 0;
+  }
+  .trending-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .trending-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">SocialConnect</div>
+        <div class="nav-links">
+          <a href="home.html"
+          <a href="/profile.html"
+          <a href="/messages.html"
+          <a href="/notifications.html"
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container main-content">
+    <div class="feed">
+      <div class="post">
+        <div class="post-header">
+          <img src="memes 1.jpg" alt="User avatar, young woman with short dark hair" class="post-avatar" width="40" height="40">
+          <span class="post-author">kiyumi</span>
+        </div>
+        <div class="post-content">
+          <p>Just finished my first 5K run! Feeling accomplished and ready to take on the world. 🏃‍♀️🌟 #FitnessGoals #PersonalAchievement</p>
+        </div>
+        <div class="post-actions">
+          <button class="action-button">Like</button>
+          <button class="action-button">Comment</button>
+          <button class="action-button">Share</button>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <img src="memes 2.webp" alt="User avatar, middle-aged man with glasses" class="post-avatar" width="40" height="40">
+          <span class="post-author">John Smith</span>
+        </div>
+        <div class="post-content">
+          <p>Check out this amazing sunset I captured last night! Nature never ceases to amaze me. 😍🌅 #NaturePhotography #BeautifulWorld</p>
+          <img src="memes 3.jpg" alt="Vibrant orange and purple sunset over a calm lake" width="100%" height="auto">
+        </div>
+        <div class="post-actions">
+          <button class="action-button">Like</button>
+          <button class="action-button">Comment</button>
+          <button class="action-button">Share</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="trending">
+        <h2>Trending Topics</h2>
+        <div class="trending-item">
+          <svg class="trending-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.09 4.56C15.09 3.62 12.09 3.5 12.09 3.5C12.09 3.5 9.09 3.61 7.09 4.55C5.82 5.15 5 6.3 5 7.58V18.5C5 19.88 6.14 21 7.5 21H16.5C17.86 21 19 19.88 19 18.5V7.58C19 6.3 18.18 5.15 16.91 4.55M17 18.5C17 18.78 16.78 19 16.5 19H7.5C7.22 19 7 18.78 7 18.5V7.58C7 7.05 7.32 6.57 7.81 6.34C9.43 5.58 12 5.5 12 5.5C12 5.5 14.57 5.59 16.19 6.35C16.68 6.58 17 7.06 17 7.59V18.5Z" fill="#1877f2"/>
+          </svg>
+          <span>#GlobalWarming</span>
+        </div>
+        <div class="trending-item">
+          <svg class="trending-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 7H13V13H11V7ZM11 15H13V17H11V15Z" fill="#1877f2"/>
+          </svg>
+          <span>#BreakingNews</span>
+        </div>
+        <div class="trending-item">
+          <svg class="trending-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1877f2"/>
+          </svg>
+          <span>#CelebrityGossip</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Add interactivity to action buttons
+    document.querySelectorAll('.action-button').forEach(button => {
+      button.addEventListener('click', function() {
+        this.style.color = '#1877f2';
+        this.style.fontWeight = 'bold';
+        
+        // Simulating action feedback
+        let actionType = this.textContent.toLowerCase();
+        let feedbackElement = document.createElement('span');
+        feedbackElement.textContent = ` You ${actionType}d this post!`;
+        feedbackElement.style.color = '#1877f2';
+        feedbackElement.style.marginLeft = '10px';
+        this.parentNode.appendChild(feedbackElement);
+
+        // Remove feedback after 2 seconds
+        setTimeout(() => {
+          feedbackElement.remove();
+          this.style.color = '#65676b';
+          this.style.fontWeight = 'normal';
+        }, 2000);
+      });
+    });
+
+    // Infinite scroll simulation
+    window.addEventListener('scroll', function() {
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
+        // Load more content when near bottom of page
+        let newPost = document.createElement('div');
+        newPost.className = 'post';
+        newPost.innerHTML = `
+          <div class="post-header">
+            <img src="avatar${Math.floor(Math.random() * 5) + 1}.jpg" alt="Random user avatar" class="post-avatar" width="40" height="40">
+            <span class="post-author">User ${Math.floor(Math.random() * 1000)}</span>
+          </div>
+          <div class="post-content">
+            <p>This is a dynamically loaded post. Keep scrolling for more content! #InfiniteScroll</p>
+          </div>
+          <div class="post-actions">
+            <button class="action-button">Like</button>
+            <button class="action-button">Comment</button>
+            <button class="action-button">Share</button>
+          </div>
+        `;
+        document.querySelector('.feed').appendChild(newPost);
+      }
+    });
+  </script>
+</body>
+</html>

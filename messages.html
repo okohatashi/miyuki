@@ -1,0 +1,296 @@
+<html><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Profile - SocialSphere</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f2f5;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      background-color: #4267B2;
+      color: white;
+      padding: 10px 0;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+    .profile-header {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    .cover-photo {
+      height: 200px;
+      /* background-image: url('memes;); */
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px 8px 0 0;
+    }
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid white;
+      position: absolute;
+      bottom: -75px;
+      left: 20px;
+    }
+    .profile-info {
+      margin-top: 80px;
+    }
+    .profile-name {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .profile-bio {
+      color: #65676B;
+      margin-top: 10px;
+    }
+    .profile-stats {
+      display: flex;
+      margin-top: 20px;
+    }
+    .stat {
+      margin-right: 20px;
+      text-align: center;
+    }
+    .stat-value {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .stat-label {
+      color: #65676B;
+      font-size: 14px;
+    }
+    .content-area {
+      display: flex;
+    }
+    .main-content {
+      flex: 2;
+      margin-right: 20px;
+    }
+    .sidebar {
+      flex: 1;
+    }
+    .section {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .section-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .friend-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .friend-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .post {
+      border-bottom: 1px solid #ddd;
+      padding: 20px 0;
+    }
+    .post:last-child {
+      border-bottom: none;
+    }
+    .post-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .post-actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    .action-button {
+      background: none;
+      border: none;
+      color: #65676B;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">SocialSphere</div>
+        <div class="nav-links">
+          <a href="/home.html"
+          <a href="/profile.html"
+          <a href="/messages.html"
+          <a href="/notifications.html"
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="profile-header">
+      <div class="cover-photo"></div>
+      <img src="memes 1.jpg" alt="Your profile picture" class="profile-photo">
+      <div class="profile-info">
+        <div class="profile-name">Alex Johnson</div>
+        <div class="profile-bio">Passionate about technology, travel, and good coffee. Software engineer by day, amateur photographer by night.</div>
+        <div class="profile-stats">
+          <div class="stat">
+            <div class="stat-value">542</div>
+            <div class="stat-label">Friends</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">1,337</div>
+            <div class="stat-label">Followers</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">890</div>
+            <div class="stat-label">Following</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-area">
+      <div class="main-content">
+        <div class="section">
+          <div class="section-title">Recent Posts</div>
+          <div class="post">
+            <div class="post-header">
+              <img src="memes 2.webp" alt="Alex's avatar" class="friend-avatar">
+              <div>
+                <strong>Alex Johnson</strong>
+                <div>Yesterday at 3:45 PM</div>
+              </div>
+            </div>
+            <p>Just got back from an amazing trip to Japan! Can't wait to share some photos. 🇯🇵📸</p>
+            <img src="memes 3.jpg" alt="Scenic view of Mount Fuji" width="100%">
+            <div class="post-actions">
+              <button class="action-button">Like</button>
+              <button class="action-button">Comment</button>
+              <button class="action-button">Share</button>
+            </div>
+          </div>
+          <div class="post">
+            <div class="post-header">
+              <img src="memes 5.jpg" alt="Alex's avatar" class="friend-avatar">
+              <div>
+                <strong>Alex Johnson</strong>
+                <div>Last week</div>
+              </div>
+            </div>
+            <p>Excited to announce that I'll be speaking at the upcoming TechConf 2023! Who else is going? #TechConf2023</p>
+            <div class="post-actions">
+              <button class="action-button">Like</button>
+              <button class="action-button">Comment</button>
+              <button class="action-button">Share</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="section">
+          <div class="section-title">About</div>
+          <p><strong>Works at:</strong> TechCorp Inc.</p>
+          <p><strong>Studied at:</strong> University of Technology</p>
+          <p><strong>Lives in:</strong> San Francisco, CA</p>
+          <p><strong>Joined:</strong> January 2015</p>
+        </div>
+        <div class="section">
+          <div class="section-title">Friends (542)</div>
+          <div class="friend-item">
+            <img src="memes 5.jpg" alt="Friend's avatar" class="friend-avatar">
+            <span>Sarah Smith</span>
+          </div>
+          <div class="friend-item">
+            <img src="memes 1.jpg" alt="Friend's avatar" class="friend-avatar">
+            <span>Mike Thompson</span>
+          </div>
+          <div class="friend-item">
+            <img src="memes 3.jpg" alt="Friend's avatar" class="friend-avatar">
+            <span>Emily Chen</span>
+          </div>
+          <a href="#" style="color: #4267B2; text-decoration: none;">See All Friends</a>
+        </div>
+        <div class="section">
+          <div class="section-title">Photos</div>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px;">
+            <img src="memes 1.jpg" alt="Photo thumbnail" width="100%" height="100">
+            <img src="memes 2.webp" alt="Photo thumbnail" width="100%" height="100">
+            <img src="memes 3.jpg" alt="Photo thumbnail" width="100%" height="100">
+            <img src="memes 5.jpg" alt="Photo thumbnail" width="100%" height="100">
+            <img src="memes 3.jpg" alt="Photo thumbnail" width="100%" height="100">
+            <img src="memes 2.webp" alt="Photo thumbnail" width="100%" height="100">
+          </div>
+          <a href="#" style="color: #4267B2; text-decoration: none;">See All Photos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Add interactivity to action buttons
+    document.querySelectorAll('.action-button').forEach(button => {
+      button.addEventListener('click', function() {
+        this.style.color = '#4267B2';
+        setTimeout(() => this.style.color = '#65676B', 300);
+      });
+    });
+
+    // Simulate loading more posts
+    window.addEventListener('scroll', () => {
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
+        const newPost = document.createElement('div');
+        newPost.className = 'post';
+        newPost.innerHTML = `
+          <div class="post-header">
+            <img src="memes 3.jpg" alt="Alex's avatar" class="friend-avatar">
+          " alt="Alex's avatar" class="friend-avatar">
+            <div>
+              <strong>Alex Johnson</strong>
+              <div>2 weeks ago</div>
+            </div>
+          </div>
+          <p>Another great day at the office! Working on some exciting new projects. #CodeLife</p>
+          <div class="post-actions">
+            <button class="action-button">Like</button>
+            <button class="action-button">Comment</button>
+            <button class="action-button">Share</button>
+          </div>
+        `;
+        document.querySelector('.main-content .section').appendChild(newPost);
+      }
+    });
+  </script>
+</body></html>

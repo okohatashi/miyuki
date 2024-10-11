@@ -1,0 +1,214 @@
+<html><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SocialSphere - Connect, Share, Explore</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f2f5;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      background-color: #4267B2;
+      color: white;
+      padding: 10px 0;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+    .main-content {
+      display: flex;
+      margin-top: 20px;
+    }
+    .feed {
+      flex: 2;
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .sidebar {
+      flex: 1;
+      margin-left: 20px;
+    }
+    .post {
+      border-bottom: 1px solid #ddd;
+      padding: 20px 0;
+    }
+    .post-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .post-actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    .action-button {
+      background: none;
+      border: none;
+      color: #65676B;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .create-post {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .create-post textarea {
+      width: 100%;
+      border: none;
+      resize: none;
+      font-size: 16px;
+    }
+    .create-post button {
+      background-color: #4267B2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">SocialSphere</div>
+        <div class="nav-links">
+          <a href="/home.html"
+          <a href="/profile.html"
+          <a href="/messages.html"
+          <a href="/notifications.html"
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container main-content">
+    <div class="feed">
+      <div class="create-post">
+        <textarea placeholder="What's on your mind?"></textarea>
+        <button>Post</button>
+      </div>
+      <div class="post">
+        <div class="post-header">
+          <img src="memes 1.jpg" alt="User avatar" class="avatar">
+          <div>
+            <strong>Jane Doe</strong>
+            <div>2 hours ago</div>
+          </div>
+        </div>
+        <p>Just finished a great book! Has anyone else read "The Midnight Library" by Matt Haig?</p>
+        <div class="post-actions">
+          <button class="action-button">Like</button>
+          <button class="action-button">Comment</button>
+          <button class="action-button">Share</button>
+        </div>
+      </div>
+      <div class="post">
+        <div class="post-header">
+          <img src="memes 3.jpg" alt="User avatar" class="avatar">
+          <div>
+            <strong>John Smith</strong>
+            <div>5 hours ago</div>
+          </div>
+        </div>
+        <p>Beautiful day for a hike! Here's a photo from the summit.</p>
+        <img src="memes 2.webp" alt="Mountain view from summit" width="100%">
+        <div class="post-actions">
+          <button class="action-button">Like</button>
+          <button class="action-button">Comment</button>
+          <button class="action-button">Share</button>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div style="background-color: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <h3>Trending Topics</h3>
+        <ul>
+          <li>#SummerVacation</li>
+          <li>#TechNews</li>
+          <li>#HealthyLiving</li>
+          <li>#MovieNight</li>
+        </ul>
+      </div>
+      <div style="background-color: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <h3>Suggested Friends</h3>
+        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+          <img src="memes 5.jpg" alt="Suggested friend avatar" style="border-radius: 50%; margin-right: 10px;">
+          <span>Alice Johnson</span>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <img src="memes 1.jpg" alt="Suggested friend avatar" style="border-radius: 50%; margin-right: 10px;">
+          <span>Bob Williams</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Simple JavaScript to handle post creation
+    document.querySelector('.create-post button').addEventListener('click', function() {
+      const postContent = document.querySelector('.create-post textarea').value;
+      if (postContent.trim() !== '') {
+        const newPost = document.createElement('div');
+        newPost.className = 'post';
+        newPost.innerHTML = `
+          <div class="post-header">
+            <img src="memes 1.jpg        " alt="User avatar" class="avatar">
+            <div>
+              <strong>You</strong>
+              <div>Just now</div>
+            </div>
+          </div>
+          <p>${postContent}</p>
+          <div class="post-actions">
+            <button class="action-button">Like</button>
+            <button class="action-button">Comment</button>
+            <button class="action-button">Share</button>
+          </div>
+        `;
+        document.querySelector('.feed').insertBefore(newPost, document.querySelector('.feed').children[1]);
+        document.querySelector('.create-post textarea').value = '';
+      }
+    });
+
+    // Add interactivity to action buttons
+    document.querySelectorAll('.action-button').forEach(button => {
+      button.addEventListener('click', function() {
+        this.style.color = '#4267B2';
+        setTimeout(() => this.style.color = '#65676B', 300);
+      });
+    });
+  </script>
+</body></html>
